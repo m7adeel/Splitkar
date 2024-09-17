@@ -10,6 +10,8 @@ export default function TransactionHistory() {
     <View className="p-2">
       <Text className="text-lg text-white font-bold tracking-wider">Recent Transactions</Text>
       <Transaction />
+      <Transaction />
+      <Transaction />
     </View>
   )
 }
