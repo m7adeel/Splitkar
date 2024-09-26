@@ -1,19 +1,23 @@
-import { View, Text } from 'react-native'
+import { View, ScrollView } from 'react-native'
 import React from 'react'
 
+// Components
 import SearchBar from '../components/SearchBar'
 import Stats from '../components/Stats'
 import TransactionHistory from '../components/TransactionHistory'
-
 import NearbyFriends from '../components/NearbyFriends'
+import NewSplitCard from '../components/NewSplitCard'
 
 export default function LandingPage() {
   const endBlack = "#151821"
   return (
     <View className="bg-[#090506] p-2 h-full">
-      {/* Search bar */}
-      <NearbyFriends />
-      <TransactionHistory />
+      <ScrollView>
+        
+        <NewSplitCard />
+        <NearbyFriends />
+        <TransactionHistory />
+      </ScrollView>
     </View>
   )
 }
