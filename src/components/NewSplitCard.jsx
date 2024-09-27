@@ -13,10 +13,13 @@ export default function NewSplitCard() {
       <View className="w-2/3 pr-5">
         <Text className="text-white text-xl mb-2">Split With</Text>
         <AvatarList />
-        <TouchableOpacity className="bg-[#ffdc64] rounded-full px-7 py-5 mt-2">
-          <Text className="text-[#392c16] text-md font-semibold">
+        <TouchableOpacity className="bg-[#ffdc64] rounded-full py-4 mt-2 pl-2 flex flex-row items-center justify-evenly w-36">
+          <Text className="text-[#392c16] text-lg font-semibold">
             Split Now
           </Text>
+          <View className="flex items-center justify-center border p-1 rounded-full">
+          <Ionicons name="arrow-forward" size={20} color="#392c16" />
+          </View>
         </TouchableOpacity>
       </View>
       <View className="bg-[#1a1416] border border-[#3f353d] rounded-xl w-1/3 p-4 flex items-center justify-between">
