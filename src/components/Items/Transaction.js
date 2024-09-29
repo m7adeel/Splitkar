@@ -5,7 +5,7 @@ import React from 'react'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 // Components
-import AvatarList from './AvatarList'
+import AvatarList from '../AvatarList'
 
 /**
  * @param {string} title - Title of the transaction

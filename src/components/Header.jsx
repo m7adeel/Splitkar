@@ -13,7 +13,7 @@ export default function Header() {
       <View>
         <Ionicons name="search" size={24} color="white" />
       </View>
-      <View>
+      <View className="h-10 w-10">
         <Avatar />
       </View>
     </View>

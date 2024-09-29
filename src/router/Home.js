@@ -7,6 +7,7 @@ import { CurvedBottomBarExpo } from 'react-native-curved-bottom-bar';
 import LandingPage from '../screens/LandingPage';
 import AddBill from '../screens/AddBill';
 import Profile from '../screens/Profile';
+import Friends from '../screens/Friends';
 
 // Icons
 import {
@@ -24,7 +25,7 @@ const _renderIcon = (routeName, selectedTab) => {
     case 'LandingPage':
       icon = 'home';
       break;
-    case 'Profile':
+    case 'Friends':
       icon = 'groups';
       break;
     case 'Notification':
@@ -35,7 +36,7 @@ const _renderIcon = (routeName, selectedTab) => {
       break;
   }
 
-  if(routeName === 'Profile') {
+  if(routeName === 'Friends') {
     return (
       <MaterialIcons
         name={icon}
@@ -43,10 +44,6 @@ const _renderIcon = (routeName, selectedTab) => {
         color={routeName === selectedTab ? '#ffdc64' : '#3c3f44'}
       />
     )
-  }
-
-  if(routeName === selectedTab) {
-    icon = icon + '-sharp';
   }
 
   return (
@@ -140,7 +137,7 @@ function Home() {
       />
       <CurvedBottomBarExpo.Screen
         position='RIGHT'
-        name="Profile" component={() => <Profile />}
+        name="Friends" component={() => <Friends />}
       />
       <CurvedBottomBarExpo.Screen
         position='RIGHT'
@@ -197,13 +194,13 @@ export const styles = StyleSheet.create({
     width: 60,
     height: 60,
     bottom: 24,
-    shadowColor: '#000',
+    shadowColor: '#d1b34b',
     shadowOffset: {
       width: 0,
-      height: 1,
+      height: 0.5,
     },
-    shadowOpacity: 0.2,
-    shadowRadius: 1.41,
+    shadowOpacity: 0.1,
+    shadowRadius: 1,
     elevation: 1,
   },
   imgCircle: {

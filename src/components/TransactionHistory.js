@@ -2,7 +2,7 @@ import { View, Text } from 'react-native'
 import React from 'react'
 
 // Components
-import Transaction from './Transaction'
+import Transaction from './Items/Transaction'
 
 
 export default function TransactionHistory() {

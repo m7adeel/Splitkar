@@ -29,7 +29,7 @@ export default function AvatarList({list, maxAvatarsToShow=2}) {
   return (
     <View className="flex flex-row-reverse">
       {remainingAvatars > 0 && (
-        <View style={{  }}>
+        <View style={{  }} className="h-10 w-10">
           <Avatar>
             <View className="flex h-full w-full items-center justify-center">
             <Text className="font-bold ml-3 text-xs">+{remainingAvatars}</Text>
@@ -38,7 +38,7 @@ export default function AvatarList({list, maxAvatarsToShow=2}) {
         </View>
       )}
       {avatars.slice(0, maxAvatarsToShow).map((avatar, index) => (
-        <View key={index} style={[{ marginRight: -19 }]}>
+        <View key={index} style={[{ marginRight: -19 }]} className="h-10 w-10">
           <Avatar />
         </View>
       ))}
