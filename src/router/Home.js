@@ -8,6 +8,7 @@ import LandingPage from '../screens/LandingPage';
 import AddBill from '../screens/AddBill';
 import Profile from '../screens/Profile';
 import Friends from '../screens/Friends';
+import Wallet from '../screens/Wallet';
 
 // Icons
 import {
@@ -133,7 +134,7 @@ function Home() {
       <CurvedBottomBarExpo.Screen
         name="Wallet"
         position='LEFT'
-        component={() => <LandingPage />}
+        component={() => <Wallet />}
       />
       <CurvedBottomBarExpo.Screen
         position='RIGHT'
@@ -145,31 +146,6 @@ function Home() {
       />
     </CurvedBottomBarExpo.Navigator>
   )
-
-  return (
-    <Tab.Navigator screenOptions={screenOptions}>
-      <Tab.Screen name="LandingPage" component={LandingPage}
-        options={{
-          tabBarLabel: 'Home',
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="home" color={color} size={size} />
-          ),
-        }}
-      />
-      <Tab.Screen name="AddBill" component={AddBill}
-        options={{
-          tabBarLabel: 'Add Bill',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="plus" color={color} size={size} />
-          ),
-          tabBarButton: (props) => (
-            <AddButton {...props} />
-          )
-        }}
-      />
-      <Tab.Screen name="Profile" component={Profile} />
-    </Tab.Navigator>
-  );
 }
 export const styles = StyleSheet.create({
   container: {
