@@ -2,16 +2,13 @@ import { View, Text } from 'react-native'
 import React from 'react'
 
 // Components
-import Transaction from './Items/Transaction'
+import TransactionList from './General/TransactionList'
 
 
 export default function TransactionHistory() {
   return (
-    <View className="p-2">
-      <Text className="text-lg text-white font-bold tracking-wider">Recent Transactions</Text>
-      <Transaction />
-      <Transaction />
-      <Transaction />
+    <View className="p-2 mt-2">
+      <TransactionList title="Recent Transaction"/>
     </View>
   )
 }
