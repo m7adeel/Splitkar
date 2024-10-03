@@ -9,6 +9,7 @@ import AddBill from '../screens/AddBill';
 import Profile from '../screens/Profile';
 import Friends from '../screens/Friends';
 import Wallet from '../screens/Wallet';
+import Notifications from '../screens/Notifications';
 
 // Icons
 import {
@@ -142,7 +143,7 @@ function Home() {
       />
       <CurvedBottomBarExpo.Screen
         position='RIGHT'
-        name="Notification" component={() => <Profile />}
+        name="Notification" component={() => <Notifications />}
       />
     </CurvedBottomBarExpo.Navigator>
   )

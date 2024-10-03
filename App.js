@@ -13,6 +13,11 @@ import MainRouter from './src/router/Main';
 export default function App() {
   return (
     <SafeAreaProvider>
+      <StatusBar
+        animated={true}
+        style='light'
+        hidden={false}
+      />
       <NavigationContainer>
         <Provider store={store}>
           <MainRouter />
