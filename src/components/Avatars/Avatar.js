@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import React from 'react'
 
 /**
@@ -20,6 +20,8 @@ export default function Avatar({url, children}) {
 
   return (
     <View className="rounded-full h-full w-full bg-yellow-300 border border-black overflow-hidden">
+      {/* Random Image */}
+      <Image source={{uri: url || "https://randomuser.me/api/portraits/men/75.jpg"}} style={{width:'100%', height:'100%'}}/>
     </View>
   )
 }
