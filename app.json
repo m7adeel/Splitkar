@@ -22,6 +22,20 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you add bill pictures from your phone."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Splitkar to access your camera"
+        }
+      ]
+    ]
   }
 }
