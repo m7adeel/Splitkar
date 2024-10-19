@@ -65,7 +65,7 @@ export function Button({
       style={[styles.container, buttonAnimationStyle]}
     >
       <Animated.Text style={[styles.text, textAnimationStyle]}>
-        Get Started
+        Split Now
       </Animated.Text>
 
       <AnimatedFeather
