@@ -1,11 +1,10 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { TouchableOpacity, Animated, StyleSheet } from 'react-native';
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useCallback } from 'react';
 
 import { CurvedBottomBarExpo } from 'react-native-curved-bottom-bar';
 
 import LandingPage from '../screens/LandingPage';
-import AddBill from '../screens/AddBill';
 import Profile from '../screens/Profile';
 import Friends from '../screens/Friends';
 import Wallet from '../screens/Wallet';
@@ -99,6 +98,14 @@ function Home() {
     },
   }
 
+  const addItem = useCallback((selectedScreen, navigate) => {
+    if(selectedScreen === 'LandingPage') {
+      navigate('AddBill');
+    } else if(selectedScreen === 'Friends') {
+      navigate('AddFriend');
+    }
+  })
+
   return (
     <CurvedBottomBarExpo.Navigator
       type="UP"
@@ -119,7 +126,7 @@ function Home() {
           style={styles.btnCircleUp}>
           <TouchableOpacity
             className="flex items-center justify-center bg-[#ffdc64] rounded-full h-full w-full"
-            
+            onPress={() => addItem(selectedTab, navigate)}
           >
             <Ionicons name={'add'} color="#1b1104" size={25} />
           </TouchableOpacity>
