@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import * as ImagePicker from 'expo-image-picker';
 
 // Icons
-import { Feather } from '@expo/vector-icons'
+import { Feather, MaterialCommunityIcons } from '@expo/vector-icons'
 import Sparkle from '../../../../../../assets/sparkle.png'
 
 export default function UploadBill() {
@@ -26,12 +26,24 @@ export default function UploadBill() {
     <View className="h-full w-[90%]">
       <View className="mt-10">
         <Text className="text-2xl text-white font-bold">Upload Your Bill</Text>
-        <Text className="text-base text-gray-400 mt-2">Take a picture or upload your bill to proceed</Text>
+        <Text className="text-base text-gray-400 mt-1">Take a picture or upload your bill to proceed</Text>
       </View>
 
-      <View className="flex h-96 py-5 items-center justify-center mt-5 w-full border border-[#292526] rounded-2xl">
+      <View className="flex h-96 items-center justify-center mt-5 w-full border border-[#292526] rounded-2xl">
         {
-          image ? (<Image source={{ uri: image }} style={{width: '50%', height:'100%'}} />) :
+          image ? (
+            <View className="h-full w-full border flex items-center justify-center">
+              <Image source={{ uri: image }} style={{ width: '50%', height: '100%' }} />
+              <View className="absolute top-2 right-2">
+                <TouchableOpacity
+                  onPress={uploadPicture}
+                  className="flex items-center py-1 px-1 rounded-full">
+                  <MaterialCommunityIcons name='circle-edit-outline' size={25} color="#fff" />
+                  <Text className="text-gray-400 text-xs">Edit</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          ) :
             (
               <TouchableOpacity
                 onPress={uploadPicture}
